@@ -1,0 +1,26 @@
+public class Startup {
+
+	public Startup(){
+		String[] word = new String[] {"Fizz","Buzz"};
+		int[] num = new int[] {3,5};
+		int limit = 100;
+		
+		for(double i = 1; i <= limit; i++) {
+			String output = "";
+			for( int x = 0; x < word.length; x++) {
+				if (i % num[x] == 0) {
+					output += word[x];
+				}
+			}
+			if(output != "") {
+				System.out.println(output);
+			}
+			else{System.out.println(i);}
+		}
+	}
+	
+	public static void main(String args[]) {
+		new Startup();
+	}
+	
+}
